@@ -27,6 +27,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set("view engine","ejs");
 //public files
 app.use (express.static("public"));
+// Point static path to dist
+app.use(express.static(path.join(__dirname, 'dist')));
 
 
 //Authenticate Section
@@ -45,7 +47,7 @@ app.use (express.static("public"));
 //Authentication
 
 
-/
+
 
 
 // Catch all other routes and return the index file
