@@ -1,0 +1,27 @@
+
+<div class=text-center>
+<h1>Books Available In My Library Account</h1>
+</div>
+
+
+
+
+<div *ngFor="let book of allbooks,let i = index" >
+  <div class="col-sm-12  well ">
+
+
+<img   src={{book.imgurl}} alt="" class="thumbnail-img col-sm-2"> 
+<div class=col-sm-10>
+<blockquote>
+  <h3>Title: {{book.title}}</h3>
+  <p>Author : {{book.author}}</p>
+   <p><a href="{{book.downurl}}" target=_blank><button class="btn btn-info btn-sm">Download</button></a></p>
+  <button (click)=return(i) class="btn btn-danger btn-sm attend">Return to Library</button>
+   <button (click)=trade(i) class="btn btn-success btn-sm attend">Trade In</button>
+</blockquote>
+
+</div>
+
+  </div>
+
+</div>

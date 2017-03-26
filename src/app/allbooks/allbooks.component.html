@@ -1,0 +1,26 @@
+
+<div class=text-center>
+<h1>All Available Library Books.</h1>
+</div>
+
+
+
+
+<div *ngFor="let book of allbooks,let i = index" >
+  <div class="col-sm-12  well ">
+
+
+<img   src={{book.imgurl}} alt="" class="thumbnail-img col-sm-2"> 
+<div class=col-sm-10>
+<blockquote>
+  <h3>Title: {{book.title}}</h3>
+  <p>Author : {{book.author}}</p>
+  
+  <button (click)=add(i) class="btn btn-danger btn-sm attend">Borrow from Library</button>
+</blockquote>
+
+</div>
+
+  </div>
+
+</div>

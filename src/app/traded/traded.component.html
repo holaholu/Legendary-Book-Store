@@ -1,0 +1,27 @@
+<div class="jumbotron text-center myjumbo">
+  <h1>Legendary Book Store</h1>
+  <p>Exchange Your Books With Other Library Users.</p>
+  </div>
+
+<div class=text-center>
+<h1>Books Available for Trading</h1>
+</div>
+
+<div *ngFor="let book of allbooks,let i = index" >
+  <div class="col-sm-12  well ">
+
+
+<img   src={{book.imgurl}} alt="" class="thumbnail-img col-sm-2"> 
+<div class=col-sm-10>
+<blockquote>
+  <h3>Title: {{book.title}}</h3>
+  <p>Author : {{book.author}}</p>
+   <p>Currently held by : {{book.owner}}</p>
+   <button (click)=claim(i) class="btn btn-success btn-sm attend">Claim Book</button>
+</blockquote>
+
+</div>
+
+  </div>
+
+</div>
